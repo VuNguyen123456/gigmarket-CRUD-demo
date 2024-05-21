@@ -1,0 +1,312 @@
+/*courses.component.css*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.top-bar {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.sign-up {
+    background-color: #8a2be2; /* Purple */
+    color: #ffffff;
+}
+
+.sign-in {
+    background-color: #ffffff; /* Blue */
+    color: #000000;
+}
+
+.top-bar button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*In the middle*/
+.content {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Sign in*/
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px; /* Set border-radius for the container */
+    overflow: hidden; /* Ensure children elements respect border-radius */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 160px;
+    height: 60px;
+    border-radius: 0;
+}
+
+.gig-worker {
+    background-color: #808080;
+    color: #ffffff;
+    margin-bottom: 15px; /* Add border-radius to top-left corner */
+}
+
+.gig-creator {
+    background-color: #808080;
+    color: #ffffff;
+    margin-bottom: 15px; /* Add border-radius to top-right corner */
+}
+
+.gig-worker.clicked {
+    background-color: #8a2be2;
+}
+
+.gig-creator.clicked {
+    background-color: #808080;
+}
+
+.gig-worker:hover, .gig-creator:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Sign in panel*/
+.sign-in-panel {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    width: 400px; /* Set width for consistency */
+    margin: auto; /* Center the panel horizontally */
+}
+
+.sign-in-panel .input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-in-panel .input-group label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.sign-in-panel .input-group input {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-in-panel .forgot-password {
+    margin-bottom: 15px;
+    margin-left: 200px;
+    font-size: 13px;
+}
+
+.forgot-password a {
+    color: #808080; /* Set the color to grey */
+    text-decoration: none; /* Remove the underline */
+}
+
+.sign-in-panel .sign-in-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: purple;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.sign-in-panel .sign-in-btn:hover {
+    background-color: #6c757d; /* Change background color on hover */
+    border-color: #6c757d; /* Change border color on hover */
+}
+
+/*Get started*/
+.get-started {
+    text-align: center;
+    margin-top: 20px;
+}
+.get-started a{
+    color: rgb(170, 4, 115); /* Set link color to grey */
+}
+
+/*Sign up*/
+.sign-up-to-work{
+    background-color: #808080;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.sign-up-to-hire{
+    background-color: #808080;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.sign-up-to-work.clicked {
+    background-color: #8a2be2;
+    border-top-right-radius: 20px;
+}
+
+.sign-up-to-hire.clicked {
+    background-color: #808080;
+    border-top-left-radius: 20px;
+}
+
+.sign-up-to-work:hover, .sign-up-to-hire:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Style for additional input fields */
+/* Style for additional input fields */
+.sign-up-panel {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    width: 700px; /* Set width for consistency */
+    margin: auto; /* Center the panel horizontally */
+}
+
+.sign-up-panel .input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-panel .input-group label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.sign-up-panel .input-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-up-panel input[type="text"],
+.sign-up-panel input[type="email"],
+.sign-up-panel input[type="tel"],
+.sign-up-panel input[type="password"] {
+    flex: 1; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    
+}
+
+.sign-up-panel .input-group.phone input[type="tel"] {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+.sign-up-panel .sign-up-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: purple;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.sign-up-panel .sign-up-btn:hover {
+    background-color: #6c757d; 
+    border-color: #6c757d;
+}
+
+.buttons {
+    margin-bottom: 20px; 
+}
+
+.get-in a {
+    color: rgb(170, 4, 115);
+}
+
+.termAgreement input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+.termAgreement label {
+    margin-left: 10px;
+}
+
+.actions {
+    /* padding: 20px;
+    border-radius: 0px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px; */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.update-email,
+.update-password {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.input-group input {
+    margin-left: 5px; 
+    margin-right: 5px;
+}

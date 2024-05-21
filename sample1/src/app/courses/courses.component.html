@@ -1,0 +1,89 @@
+<!--courses.component.html-->
+<!DOCTYPE html>
+    <div class="top-bar">
+        <div>
+            <button class="sign-in" id="signInBtn" (click)="showSignInPanel()">Sign In</button>
+            <button class="sign-up" id="signUpBtn" (click)="showSignUpPanel()">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Sign in -->
+        <div class="sign-in-panel" id="signInPanel" *ngIf="signInVisible">
+            <h2>Sign In</h2>
+            <div class="buttons">
+                <button class="gig-worker">GIG Worker</button>
+                <button class="gig-creator">GIG CREATOR</button>
+            </div>
+            <div class="input-group">
+                <label for="signin-email">Email:</label>
+                <input type="email" id="signin-email" name="signin-email" placeholder="abc@example.com" [(ngModel)]="email">
+            </div>
+            <div class="input-group">
+                <label for="signin-password">Password:</label>
+                <input type="password" id="signin-password" name="signin-password" placeholder="Your password" [(ngModel)]="password">
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="sign-in-btn" (click)="getUser()">Sign In</button>
+            <div class="get-started" (click)="showSignUpPanel()">
+                <p>Don't have an account? <a href="#">Get Started</a></p>
+            </div>
+        </div>
+
+        <!-- Sign up -->
+        <div class="sign-up-panel" id="signUpPanel" *ngIf="signUpVisible">
+            <h2>Sign Up</h2>
+            <div class="buttons">
+                <button class="sign-up-to-work" (click)="setRoleWorker()">Sign up to work</button>
+                <button class="sign-up-to-hire" (click)="setRoleHirer" >Sign up to hire</button>
+            </div>
+            <!-- Additional input fields -->
+            <div class="input-group">
+                <label for="signup-firstName">First Name:</label>
+                <input type="text" id="signup-firstName" name="signup-firstName" placeholder="Your first name" [(ngModel)]="first">
+                <label for="signup-lastName">Last Name:</label>
+                <input type="text" id="signup-lastName" name="signup-lastName" placeholder="Your last name" [(ngModel)]="last">
+            </div>
+            <div class="input-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" placeholder="abc@example.com" [(ngModel)]="email">
+                <label for="signup-phoneNumber">Phone Number:</label>
+                <input type="tel" id="signup-phoneNumber" name="signup-phoneNumber" placeholder="Your phone number" [(ngModel)]="phone">
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" placeholder="Your password" [(ngModel)]="password">
+                <label for="signup-confirmPassword">Confirm Password:</label>
+                <input type="password" id="signup-confirmPassword" name="signup-confirmPassword" placeholder="Confirm your password">
+            </div>
+            <div class="termAgreement">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms">
+                <label for="agreeTerms">By checking this box, you agree to our Terms of Service and Privacy Policy.</label>
+            </div>
+            <button class="sign-up-btn" (click) = "signUp()">Sign Up</button>
+            <div class="get-in" (click)="showSignInPanel()">
+                <p>Already have an account? <a href="#">Get In</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <h2>Update Password</h2>
+        <div class="input-group">
+          <label for="update-email">Email:</label>
+          <input type="email" id="update-email" name="update-email" placeholder="abc@example.com" [(ngModel)]="email">
+          <!-- Assuming you're using the same email input for update -->
+          <label for="update-password">New Password:</label>
+          <input type="password" id="update-password" name="update-password" placeholder="New password" [(ngModel)]="newPassword">
+        </div>
+        <button (click)="updateUser()">Update Password</button>
+        
+        <h2>Delete User</h2>
+        <div class="input-group">
+            <label for="delete-email">Email:</label>
+            <input type="email" id="delete-email" name="delete-email" placeholder="abc@example.com" [(ngModel)]="deleteEmail">
+        </div>
+        <button (click)="deleteUser()">Delete User</button>
+      </div>
+
